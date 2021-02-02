@@ -2,6 +2,9 @@ module.exports = {
   root: true,
   parserOptions: {
     sourceType: 'script',
+    ecmaFeatures: {
+      legacyDecorators: true,
+    },
   },
   extends: [
     // https://github.com/vuejs/eslint-plugin-vue#bulb-rules
@@ -20,8 +23,6 @@ module.exports = {
     'no-console': process.env.PRE_COMMIT
       ? ['error', { allow: ['warn', 'error'] }]
       : 'off',
-    'import/no-relative-parent-imports': 'error',
-    'import/order': 'error',
     'vue/array-bracket-spacing': 'error',
     'vue/arrow-spacing': 'error',
     'vue/block-spacing': 'error',
@@ -37,7 +38,6 @@ module.exports = {
     'vue/no-deprecated-scope-attribute': 'error',
     'vue/no-empty-pattern': 'error',
     'vue/object-curly-spacing': ['error', 'always'],
-    'vue/padding-line-between-blocks': 'error',
     'vue/space-infix-ops': 'error',
     'vue/space-unary-ops': 'error',
     'vue/v-on-function-call': 'error',

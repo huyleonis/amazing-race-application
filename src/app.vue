@@ -1,7 +1,8 @@
 <script>
 import appConfig from '@src/app.config'
+import { Component, Vue } from 'vue-property-decorator'
 
-export default {
+@Component({
   page: {
     // All subcomponent titles will be injected into this template.
     titleTemplate(title) {
@@ -9,7 +10,8 @@ export default {
       return title ? `${title} | ${appConfig.title}` : appConfig.title
     },
   },
-}
+})
+export default class App extends Vue {}
 </script>
 
 <template>
